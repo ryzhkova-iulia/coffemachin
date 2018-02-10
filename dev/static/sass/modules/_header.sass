@@ -1,0 +1,46 @@
+header
+	width: 100%
+	padding: 20px 0
+
+.logo
+	width: 100%
+	max-width: 220px
+	margin-right: 37px
+
+.tel
+	+flexBlockColumn
+	color: $mainBlue
+	margin-right: auto
+	span
+		+font-size(13px)
+		text-transform: uppercase
+	a
+		+font-size(24px)
+		color: $mainBlue
+		text-transform: uppercase
+
+.block-right
+	+flexBlockRow
+.serch
+	+flexBlockRow
+	flex-wrap: nowrap
+	border: 1px solid rgb(225, 225, 225)
+	border-radius: 20px
+	padding-left: 20px
+	input
+		border: none
+		width: 100%
+		max-width: 215px
+		height: 30px
+		&::placeholder
+			+font-size(13px)
+			color: $gray
+	&:after
+		content: ""
+		background-image: url("../img/general/search.png")
+		display: inline-block
+		width: 24px
+		height: 18px
+		margin-right: 10px
+.busket
+	margin-left: 35px

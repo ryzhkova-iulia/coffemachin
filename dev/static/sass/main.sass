@@ -1,0 +1,147 @@
+// Подключаем стили библиотек
+@import '_libs.scss'
+
+// Подключаем переменные
+@import '_vars.sass'
+
+// Подключаем спрайты (просто раскоментируем импорт при появлении PNG спрайтов)
+@import '_sprite.sass'
+
+// Подключаем миксины
+@import '_mixins.sass'
+
+
+
+html
+  line-height: 1
+  font-size: 16px
+
+
+
+body
+  font-family: 'Museo Sans Cyrl 500'
+  font-weight: normal
+  font-style: normal
+  color: #282828
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  -webkit-tap-highlight-color: transparent /* For some Androids */
+  outline: none
+
+
+h1,h2,h3,h4,h5,h6
+  margin: 0
+
+
+
+ul,li
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+
+
+p
+  margin: 0
+
+
+
+a
+  text-decoration: none
+  color: black
+
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+  vertical-align: middle
+
+
+textarea
+  resize: none
+
+
+
+section
+  position: relative
+
+
+
+input,
+select,
+button
+  outline: none
+
+
+
+*, *:before, *:after
+  box-sizing: border-box
+
+
+
+.hide
+  display: none
+
+
+
+.show
+  display: block
+
+
+::-moz-selection
+  background: #b3d4fc
+  text-shadow: none
+
+
+
+::selection
+  background: #b3d4fc
+  text-shadow: none
+
+
+
+.clearfix:before,
+.clearfix:after
+  content: " "
+  display: table
+
+
+
+.clearfix:after
+  clear: both
+
+
+
+.clearfix
+  *zoom: 1
+
+
+
+.wrapper
+  width: 100%
+
+*:active, *:focus
+  outline: none
+
+*:-moz-focus-inner
+  border: 0
+
+
+
+
+// Общие стили
+@import '_common_styles.sass'
+
+// Стили шапки
+@import 'modules/_header.sass'
+
+// Стили главной страницы
+@import 'page/_index.sass'
+
+// Стили футера
+@import 'modules/_footer.sass'
+
+// Стили медиазапросов
+@import '_media.sass'
