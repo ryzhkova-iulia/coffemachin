@@ -20,11 +20,13 @@ $(document).ready(function () {
 
     $(".filter-item__title").on("click", function () {
         $(this).parent().find(".filter-item__cont").slideToggle();
+        $(this).toggleClass("arrow-down");
     });
 
     $(".show-filter").on("click", function () {
         $(".filter").slideToggle();
         $(".filter-item__cont").css("display", "none");
+        $(".filter-item__title").addClass("arrow-down");
     });
 
     $(".show-more").on("click", function () {

@@ -2,29 +2,31 @@
 	.slick-next
 		right: 20px
 		width: 59px
-		height: 59px
+		height: 58px
 		display: block
+		background-color: #FFFFFF
+		border-radius: 50%
 		opacity: 1
 		z-index: 100
 	.slick-prev
 		left: 20px
 		width: 59px
-		height: 59px
+		height: 58px
+		background-color: #FFFFFF
+		border-radius: 50%
 		display: block
 		opacity: 1
 		z-index: 100
 	.slick-prev:before
-		content: ""
-		background: url("../img/general/arrow-left.png")
-		width: 59px
-		height: 59.5px
+		content: "\f060"
+		font: normal normal normal 20px/1 FontAwesome
+		color: #a8a9a9
 		opacity: 1
 		display: block
 	.slick-next:before
-		content: ""
-		background: url("../img/general/arrow-right.png")
-		width: 59px
-		height: 59.5px
+		content: "\f061"
+		font: normal normal normal 20px/1 FontAwesome
+		color: #a8a9a9
 		opacity: 1
 		display: block
 .color-gray
@@ -269,6 +271,14 @@
 		border-bottom: none
 	&__title
 		cursor: pointer
+		position: relative
+		&:after
+			position: absolute
+			right: 0
+			top: 0
+			content: "\f106"
+			font: normal normal normal 15px/1 FontAwesome
+			transition: 0.3s
 	&__cont
 		margin-top: 15px
 		+flexBlockColumn
@@ -289,6 +299,12 @@
 		cursor: pointer
 		&:hover
 			color: $mainBlue
+
+.arrow-down
+	&:after
+		transform: rotate(180deg)
+		transition: 0.3s
+
 .filter-item__checkbox
 	margin-bottom: 20px
 	&:last-of-type
