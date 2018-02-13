@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE = edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="static/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+    <title>Главная страница
+    </title>
+  </head>
+  <body>
+    <header>
+      <div class="content content_flex"><a class="logo" href="/"><img src="./static/img/general/logo.png"></a>
+        <div class="tel"><span>ТЕЛЕФОН ГОРЯЧЕЙ ЛИНИИ</span><a href="tel:88007001178">8 800 700 11 78</a></div>
+        <div class="block-right">
+          <div class="serch">
+            <input type="text" placeholder="Поиск по сайту...">
+          </div><a class="basket js-basket" href="#"><img src="./static/img/general/path.png">
+            <div class="basket__count">1</div></a>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="container registration">
+        <div class="content">
+          <div class="content_flex js-type physical">
+            <div class="reg-blockleft">
+              <div class="reg-cont">
+                <div class="block-title">Тип плательщка</div>
+                <div class="bnt-tab">
+                  <button class="btn btn-physical btn_active" value="physical">Физическое лицо</button>
+                  <button class="btn btn-legal" value="legal"> Юридическое лицо</button>
+                </div>
+              </div>
+              <div class="reg-cont">
+                <div class="block-title">Данные получателя (обязательные):</div>
+                <div class="reg-input">
+                  <div class="block-input">
+                    <label>Имя*</label>
+                    <div class="input-item error">
+                      <input type="text" placeholder="Иван">
+                    </div>
+                  </div>
+                  <div class="block-input">
+                    <label>Телефон*</label>
+                    <div class="input-item">
+                      <input type="tel" placeholder="8(999)999-99-99">
+                    </div>
+                  </div>
+                  <div class="block-input">
+                    <label>E-mail*</label>
+                    <div class="input-item">
+                      <input type="text" placeholder="send@domain.ru">
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery">
+                  <div class="block-title">Способ доставки:</div>
+                  <div class="delivery-btn">
+                    <label class="delivery_control">
+                      <input class="checkbox" type="radio" name="delivery" checked value="courier"><span class="checkbox-custom"></span><span class="label">Курьерская доставка - 300 руб/бесплатно</span>
+                    </label>
+                    <label class="delivery_control">
+                      <input class="checkbox" type="radio" name="delivery" value="pickup"><span class="checkbox-custom"></span><span class="label">Самовывоз - бесплатно</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="card-company">
+                  <div class="block-title">Карточка организации:</div>
+                  <div class="download"><span>Загрузите карточку организации</span>
+                    <!--span Выбрать файл-->
+                    <div class="upload"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="reg-contacts js-delivery-form courier">
+                <div class="address">
+                  <div class="block-title">Адрес доставки:</div>
+                  <div class="reg-input">
+                    <div class="block-input">
+                      <label>Город*</label>
+                      <div class="input-item error">
+                        <input type="text" placeholder="Город">
+                      </div>
+                    </div>
+                    <div class="block-input courier">
+                      <label>Улица*</label>
+                      <div class="input-item">
+                        <input type="text" placeholder="Улица">
+                      </div>
+                    </div>
+                    <div class="block-input courier">
+                      <label>Дом*</label>
+                      <div class="input-item">
+                        <input type="text" placeholder="Дом">
+                      </div>
+                    </div>
+                    <div class="block-input courier">
+                      <label>Квартира</label>
+                      <div class="input-item">
+                        <input type="text" placeholder="Квартира">
+                      </div>
+                    </div>
+                    <div class="block-input courier">
+                      <label>Индекс</label>
+                      <div class="input-item">
+                        <input type="text" placeholder="Индекс">
+                      </div>
+                    </div>
+                    <div class="block-input pickup">
+                      <label>Пункт самовывоза*</label>
+                      <div class="input-item">
+                        <select type="tel" placeholder="Адрес пункта самовывоза">
+                          <option>vvffvsv</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="block-input">
+                      <label>Комментарий</label>
+                      <div class="input-item">
+                        <input type="text" placeholder="Комментарий">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="payment">
+                  <div class="block-title">Выбор способа оплаты:</div>
+                  <div class="btn">Оплатить при получении</div>
+                  <div class="btn_subtitle">
+                    <div class="btn">Банковская карта</div><span>Данные карты заполняются на следующем шаге</span>
+                  </div>
+                  <div class="btn_subtitle">
+                    <div class="btn btn_subtitle">Квитанция для банка</div><span>Данные заполняются на следующем шаге</span>
+                  </div>
+                </div>
+              </div><a class="btn btn_orange btn-order" href="./order-accept.html">Оформить заказ</a>
+            </div>
+            <div class="reg-blockright">
+              <div class="prew">
+                <div class="prew__title">КОРЗИНА</div>
+                <div class="prew__count">1 товар</div>
+                <div class="product"><img class="product__img" src="./static/img/general/model.png">
+                  <div class="product__info">
+                    <div class="product__info-title">Кофеварка Polaris PCM 0613A</div>
+                    <div class="block-more">
+                      <div class="product__info-more"><span>Цена</span><span>2 590 ₽</span></div>
+                      <div class="product__info-more"><span>Количество</span><span>1 шт</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-more block-more_result">
+                  <div class="product__info-more"><span>Цена без скидки</span><span>2 590 ₽</span></div>
+                  <div class="product__info-more"><span>К оплате</span><span class="color-orange">2590 ₽</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="content content_flex">
+        <div class="module__share footer-item"><a class="icon" href="https://www.youtube.com/channel/UCjqLNIr1L5ZlDbjscuCJfxA" target="_blank"><i class="fa fa-youtube"></i></a><a class="icon" href="https://www.facebook.com/polarislive/" target="_blank"><i class="fa fa-facebook"></i></a><a class="icon" href="https://vk.com/polaris_life" target="_blank"><i class="fa fa-vk"></i></a><a class="icon" href="https://ok.ru/polaris" target="_blank"><i class="fa fa-odnoklassniki"></i></a><a class="icon" href="https://www.instagram.com/polaris_home/" target="_blank"><i class="fa fa-instagram"></i></a></div>
+        <form class="serch serch_footer footer-item">
+          <input type="text" placeholder="Поиск по сайту...">
+          <div class="block-button">
+            <div class="button"></div>
+          </div>
+        </form>
+        <div class="contacts footer-item"><span>ТЕЛЕФОН ГОРЯЧЕЙ ЛИНИИ</span><a href="tel:84993221923">8 499 322 19 23</a>
+          <div class="callback">Обратная связь</div>
+        </div>
+        <div class="disclaimer footer-item">© 2006-2017 «Polaris». Все права защищены. Все цены указан в рублях. Предложения действительны пока товар имеется в наличие.<a href="/privacy/">Конфиденциальность</a></div>
+      </div>
+    </footer>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/libs.min.js"></script>
+    <!--script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")-->
+    <script src="static/js/inputmask.min.js"></script>
+    <script src="static/js/jquery.inputmask.min.js"></script>
+    <script src="static/js/jquery.fancybox.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+.detail
+	width: 100%
+	max-width: 1187px
+	margin: auto
+	padding: 45px
+	background-color: #FFFFFF
+	position: relative
+.detail-box
+	+flexBlockRow
+	align-items: flex-start
+	&__left
+		width: 50%
+	&__right
+		width: 50%
+	.title
+		text-transform: none
+
+.block-adv
+	+flexBlockRow
+	justify-content: flex-start
+	align-items: flex-end
+	margin-bottom: 20px
+	&__item
+		margin-right: 20px
+	&_gar
+		+sprite($s-shild-garanteer)
+		width: 42px
+		height: 76px
+	&_hit
+		+sprite($s-shild-hit)
+		width: 36px
+		height: 76px
+	&_new
+		+sprite($s-shild-new2)
+		width: 41px
+		height: 66px
+
+.block-btn
+	+flexBlockRow
+	margin-bottom: 20px
+	.btn
+		width: 49%
+		text-align: center
+
+
+.detail-info
+	margin-bottom: 20px
+	color: #000000
+	+flexBlockColumn
+	align-items: flex-start
+	+font-size(13px)
+	line-height: 1.3
+
+.characteristics
+	+flexBlockColumn
+	align-items: flex-start
+	width: 100%
+	color: $mainBlue
+	+font-size(13px)
+	&__title
+		padding: 15px
+		width: 100%
+		background-color: #f3f3f3
+	&__item
+		+flexBlockRow
+		width: 100%
+		border-bottom: 1px solid #f3f3f3
+		padding: 15px
+		&:last-child
+			border-bottom: none
+	&_more
+		cursor: pointer
+		color: #000000
+		justify-content: flex-start
+		span
+			text-decoration: underline
+		i
+			+font-size(16px)
+			margin-left: 5px
+	.show-more
+		border: none
+		span
+			border: none
+			padding: 0
+			margin: 0
+			+font-size(13px)
+
+.hide
+	display: none
+.slider-for
+	img
+		width: 100%
+		max-width: 500px
+

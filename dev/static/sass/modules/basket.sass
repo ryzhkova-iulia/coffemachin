@@ -1,0 +1,165 @@
+.block-basket
+	width: 100%
+	max-width: 1200px
+	margin: auto
+	background-color: #FFFFFF
+	padding: 20px
+	position: relative
+
+.breadcrumbs
+	+flexBlockRow
+	justify-content: flex-start
+	margin-bottom: 25px
+	font-family: 'Museo Sans Cyrl 300'
+	&__item
+		margin-bottom: 5px
+		text-transform: uppercase
+		color: #333
+		+font-size(13px)
+		margin-right: 10px
+		&_active
+			color: $mainBlue
+			text-decoration: underline
+		&_orange
+			color: $orange
+
+.orders
+	+flexBlockRow
+	align-items: flex-start
+
+.order-item
+	+flexBlockRow
+	width: 100%
+	justify-content: space-between
+	align-items: flex-start
+	padding: 20px 0
+	font-family: 'Museo Sans Cyrl 300'
+	border-bottom: 1px solid #b7b7b7
+	margin-bottom: 25px
+	&__info-name
+		text-transform: uppercase
+		margin-bottom: 20px
+		color: #333
+		font-family: 'Museo Sans Cyrl 300'
+	&__list
+		color: #333
+		+font-size(14px)
+	&__info
+		margin-right: auto
+	&__price
+		span
+			color: $orange
+			font-weight: 700
+			margin-bottom: 10px
+			display: block
+			+font-size(30px)
+		.order-delete
+			cursor: pointer
+			color: $mainBlue
+			+font-size(11px)
+
+.order
+	width: 75%
+
+
+.promo
+	width: 23%
+	border: 1px solid #b7b7b7
+	padding: 20px
+	input
+		width: 100%
+		margin-bottom: 10px
+		height: 30px
+		padding-left: 15px
+	&__title
+		text-transform: uppercase
+		text-align: center
+		color: $mainBlue
+		+font-size(13px)
+		line-height: 1.3
+		margin-bottom: 10px
+	.btn
+		color: #FFFFFF
+		text-transform: uppercase
+		text-align: center
+		+font-size(13px)
+
+.order-count
+	position: relative
+	+flexBlockRow
+	justify-content: flex-start
+	margin-bottom: 15px
+.uk-button:focus
+	background-color: #f5f5f5
+	color: #444
+	outline: none
+	text-decoration: none
+.btn-count
+	padding: 0
+	box-sizing: border-box
+	width: 34px
+	height: 34px
+	line-height: 34px
+	background: none
+	border: 1px solid #ccc
+	cursor: pointer
+
+.count__input
+	width: 34px
+	height: 34px
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	padding: 0
+	text-align: center
+	border: 1px solid #ccc !important
+
+.count__plus
+	border-left: none
+
+.count__minus
+	border-right: none
+
+
+.result
+	border-bottom: 1px solid #b7b7b7
+	margin-bottom: 20px
+	padding-bottom: 20px
+	+flexBlockRow
+	align-items: flex-start
+	.btn
+		display: block
+
+.result-registration
+	span
+		+font-size(14px)
+		color: #333
+		display: block
+		margin-bottom: 15px
+
+.result-sum
+	&__title
+		color: $mainBlue
+		+font-size(14px)
+		display: block
+		margin-bottom: 5px
+	&__price
+		font-family: 'Museo Sans Cyrl 700'
+		+font-size(30px)
+		color: #333
+
+.back
+	text-align: left
+	color: #333
+	+font-size(14px)
+	cursor: pointer
+	margin-bottom: 30px
+	span:before
+		content: "\f104"
+		display: inline-block
+		font: normal normal normal 20px/1 FontAwesome
+		font-weight: 600
+		margin-right: 5px
+		vertical-align: text-bottom
+
+

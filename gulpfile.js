@@ -116,7 +116,7 @@ gulp.task('watch', ['browsersync', 'sass', 'scripts'], function() {
 
 // Очистка папки сборки
 gulp.task('clean', function() {
-    return del.sync('product');
+    return del.sync('docs');
 });
 
 // Оптимизация изображений
@@ -127,30 +127,30 @@ gulp.task('img', function() {
             use: [pngquant()]
 
         })))
-        .pipe(gulp.dest('product/static/img'));
+        .pipe(gulp.dest('docs/static/img'));
 });
 
 // Сборка проекта
 
 gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
     var buildCss = gulp.src('dev/static/css/*.css')
-        .pipe(gulp.dest('product/static/css'));
+        .pipe(gulp.dest('docs/static/css'));
 
     var buildFonts = gulp.src('dev/static/fonts/**/*')
-        .pipe(gulp.dest('product/static/fonts'));
+        .pipe(gulp.dest('docs/static/fonts'));
 
     var buildJs = gulp.src('dev/static/js/**.js')
-        .pipe(gulp.dest('product/static/js'));
+        .pipe(gulp.dest('docs/static/js'));
 
     var buildHtml = gulp.src('dev/*.html')
-        .pipe(gulp.dest('product/'));
+        .pipe(gulp.dest('docs/'));
 
     var buildImg = gulp.src('dev/static/img/sprite/sprite.png')
         .pipe(imagemin({
             progressive: true,
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('product/static/img/sprite/'));
+        .pipe(gulp.dest('docs/static/img/sprite/'));
 });
 
 // Очистка кеша

@@ -1,0 +1,15 @@
+extends ../layout/main
+
+block title
+	| Главная страница
+
+block content
+	.container
+		.content
+			.form-callback.form-callback-accepted.accepted
+				form
+					.form-name Ваш заказ принят
+					span Менеджер с вами свяжется в течение 10 минут
+					span Номер вашего заказа - 12345678
+					span Информация о заказе отправлена на send@domain.ru
+					img(src="./static/img/general/arrow.png").form-basket

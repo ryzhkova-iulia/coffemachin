@@ -38,6 +38,7 @@
 	+font-size(13px)
 	display: inline-block
 	list-style-type: disc
+	margin-left: 10px
 	li
 		list-style-type: disc
 		text-align: left
@@ -115,65 +116,521 @@
 .main-cont
 	+flexBlockRow
 	align-items: flex-start
+	margin-bottom: 43px
+
+
 .catalog
 	width: 74%
-	text-align: center
+	+flexBlockRow
+	justify-content: space-around
+	&_list
+		+flexBlockColumn
+		.catalog-item
+			max-width: 100%
+		.line
+			display: none
+		.catalog-item__cont
+			+flexBlockRow
+		.catalog-item__name, catalog-item__list
+			order: 0
+		.catalog-item__price
+			order: 1
+		.catalog-item__btn
+			text-align: center
+
 .catalog-item
-	display: inline-block
+	position: relative
 	border: 1px solid #b7b7b7
 	border-bottom: none
-	padding: 20px
-	padding-bottom: 0
 	width: 100%
 	max-width: 285px
 	text-align: center
 	margin-right: 3px
 	margin-bottom: 10px
-	&:nth-child(3)
-		margin-right: 0
+	cursor: pointer
+	transition: 0.3s
+	&:hover .catalog-item__cont:after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		background-color: #FFFFFF
+		z-index: 20
+		opacity: 0.8
+	&__cont:before
+		display: none
+		content: ""
+		background: url("../img/general/watch.png") no-repeat center
+		background-size: cover
+		width: 68px
+		height: 68px
+		position: absolute
+		left: 0
+		right: 0
+		margin: auto
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 25
+	&:hover .catalog-item__cont:before
+		display: block
+	&:hover.catalog-item
+		transition: 0.3s
+		transform: scale(1.04)
 	img
-		padding-bottom: 40px
+		padding-bottom: 50px
+	&__cont
+		position: relative
+		padding: 20px 20px 0 20px
+		display: block
 	&__name
 		+font-size(20px)
 		text-align: left
 		line-height: 1.3
 		color: #000000
 		margin-bottom: 10px
+		max-width: 180px
+		width: 100%
 	&__price
 		+font-size(20px)
 		color: $mainBlue
 		text-transform: uppercase
 		text-align: left
 		margin-bottom: 10px
+		strike
+			color: $gray
 	&__list
 		text-align: left
 		+font-size(13px)
 		margin-bottom: 15px
+		max-width: 185px
+		width: 100%
 		li
 			line-height: 1.2
 	&__btn
-		background-image: linear-gradient( to right, #1d3f77 0%, #536d97 100%)
-		color: #FFFFFF
-		+font-size(16px)
-		font-family: 'Museo Sans Cyrl 300'
-		margin-right: -20px
-		margin-left: -20px
-		padding: 14px 0 16px
-		cursor: pointer
 		text-align: left
 		padding-left: 20px
 		&:hover
 			background-image: linear-gradient( to right, #ff6c14 0%, #ff8d49 100%)
-		&_black
-			background-image: none
-			background-color: #000000
+	&__img
+		position: relative
+		display: inline-block
+.sale
+	position: absolute
+	bottom: 35px
+	right: 0
+	background-color: #ff6c14
+	color: #FFFFFF
+	border-radius: 50%
+	width: 65px
+	height: 65px
+	+flexBlockColumn
+	justify-content: center
+	opacity: 0.8
+	z-index: 10
 .line
 	width: 100%
 	height: 1px
 	display: block
 	background-color: #b7b7b7
 	margin-bottom: 15px
+
+.shild-like
+	position: absolute
+	top: 0
+	right: 30px
+
+.shild
+	z-index: 25
+
+
+.shild-new
+	position: absolute
+	top: 0
+	right: 65px
+
+.shild-sale
+	position: absolute
+	top: 0
+	right: 100px
+
 .filter
+	+flexBlockColumn
 	width: 25%
 	border: 1px solid #b7b7b7
+	color: $mainBlue
+.filter-item
+	text-align: left
+	width: 100%
+	padding: 18px 20px
+	border-bottom: 1px solid #b7b7b7
+	&:last-child
+		border-bottom: none
+	&__title
+		cursor: pointer
+	&__cont
+		margin-top: 15px
+		+flexBlockColumn
+		align-items: flex-start
+	&__show
+		border: 1px solid rgba(25, 59, 120, 0.6)
+		padding: 10px 20px
+		color: $mainBlue
+		cursor: pointer
+		background-color: #FFFFFF
+		margin-bottom: 15px
+		&:hover
+			background-color: $mainBlue
+			color: #FFFFFF
+	&__restart
+		color: $gray
+		text-decoration: underline
+		cursor: pointer
+		&:hover
+			color: $mainBlue
+.filter-item__checkbox
+	margin-bottom: 20px
+	&:last-of-type
+		margin-bottom: 0
+	input[type="checkbox"]
+		display: none
+	input[type="checkbox"] + label
+		color: #b7b7b7
+		font-family: 'Museo Sans Cyrl 300'
+		cursor: pointer
+	input[type="checkbox"] + label::before
+		content: ""
+		display: inline-block
+		height: 12px
+		width: 12px
+		margin: 0 5px 0 0
+		background-color: #FFFFFF
+		border: 1px solid #b7b7b7
+		border-radius: 3px
+	input[type="checkbox"]:checked + label::before
+		content: ""
+		display: inline-block
+		height: 12px
+		width: 12px
+		background: url("../img/general/checked.png") no-repeat center
 
+.show-filter
+	display: none
+	margin-left: auto
+	margin-right: 20px
+	margin-bottom: 20px
+	border: 1px solid $mainBlue
+	padding: 10px 10px
+	+font-size(13px)
+	width: 100%
+	max-width: 214px
+	text-transform: uppercase
+	text-align: left
+	justify-content: space-between
+	cursor: pointer
+	&:after
+		content: "\f0b0"
+		font: normal normal normal 14px/1 FontAwesome
+		color: $mainBlue
+		display: inline-block
+		margin-right: 10px
+	&:hover
+		background-color: $mainBlue
+		color: #FFFFFF
+	&:hover.show-filter:after
+		color: #FFFFFF
+
+//range
+.range-slider
+	width: 100%
+	margin: auto
+	text-align: center
+	position: relative
+	height: 5em
+	margin-bottom: 5px
+	p
+		width: 100%
+		display: block
+		text-align: left
+		span
+			display: inline-block
+			margin-left: 10px
+
+.range-slider svg,
+.range-slider input[type=range]
+	position: absolute
+	left: 0
+	bottom: 0
+
+input[type=number]
+	border: 1px solid #ddd
+	color: $gray
+	width: 75px
+	padding: 12px 10px
+	text-align: left
+	-moz-appearance: textfield
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button
+	-webkit-appearance: none
+
+input[type=number]:invalid,
+input[type=number]:out-of-range
+	border: 2px solid #ff6347
+
+input[type=range]
+	//-webkit-appearance: none
+	appearance: none
+	width: 100%
+
+input[type=range]:focus
+	outline: none
+
+input[type=range]:focus::-webkit-slider-runnable-track
+	background: $mainBlue
+
+input[type=range]:focus::-ms-fill-lower
+	background: $mainBlue
+
+input[type=range]:focus::-ms-fill-upper
+	background: $mainBlue
+
+input[type=range]::-webkit-slider-runnable-track
+	width: 100%
+	height: 5px
+	cursor: pointer
+	animate: 0.2s
+	background: $mainBlue
+	border-radius: 1px
+	box-shadow: none
+	border: 0
+
+input[type=range]::-webkit-slider-thumb
+	z-index: 2
+	position: relative
+	box-shadow: 0px 0px 0px #000
+	border: 1px solid $mainBlue
+	height: 18px
+	width: 18px
+	border-radius: 25px
+	background: #000
+	cursor: pointer
+	-webkit-appearance: none
+	margin-top: -7px
+
+input[type=range]::-moz-range-track
+	width: 100%
+	height: 5px
+	cursor: pointer
+	animate: 0.2s
+	background: $mainBlue
+	border-radius: 1px
+	box-shadow: none
+	border: 0
+
+input[type=range]::-moz-range-thumb
+	z-index: 2
+	position: relative
+	box-shadow: 0px 0px 0px #000
+	border: 1px solid $mainBlue
+	height: 18px
+	width: 18px
+	border-radius: 25px
+	background: #000
+	cursor: pointer
+
+input[type=range]::-ms-track
+	width: 100%
+	height: 5px
+	cursor: pointer
+	animate: 0.2s
+	background: transparent
+	border-color: transparent
+	color: transparent
+
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper
+	background: $mainBlue
+	border-radius: 1px
+	box-shadow: none
+	border: 0
+
+input[type=range]::-ms-thumb
+	z-index: 2
+	position: relative
+	box-shadow: 0px 0px 0px #000
+	border: 1px solid $mainBlue
+	height: 18px
+	width: 18px
+	border-radius: 25px
+	background: #a1d0ff
+	cursor: pointer
+
+.hide
+	display: none
+
+.show-more
+	width: 100%
+	border: 1px solid #b7b7b7
+	color: #b7b7b7
+	padding: 20px 0
+	text-align: center
+	font-family: 'Museo Sans Cyrl 300'
+	+font-size(18px)
+	span:last-of-type
+		border: 1px solid #b7b7b7
+		padding: 5px 10px
+		display: inline-block
+		margin-left: 15px
+		cursor: pointer
+.block-text
+	.title
+		text-transform: none
+		margin-bottom: 10px
+	margin-bottom: 43px
+p
+	+font-size(13px)
+	line-height: 1.3
+	margin-bottom: 15px
+
+.video
+	max-width: 600px
+	margin: auto
+	margin-bottom: 43px
+	position: relative
+	padding-bottom: 37%
+	height: 0
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+.adv
+	+flexBlockRow
+	padding: 40px 0
+
+.adv-item
+	width: 32.5%
+	background-color: #FFFFFF
+	text-align: right
+	padding: 44px 35px
+	position: relative
+	&_img
+		img
+			position: absolute
+			left: 0
+			bottom: 0
+	&__info
+		width: 100%
+		max-width: 162px
+		text-align: left
+		display: inline-block
+	&__title
+		+font-size(13px)
+		text-transform: uppercase
+		color: $mainBlue
+		line-height: 1.3
+	&__text
+		+font-size(13px)
+		line-height: 1.3
+.color-dark-gray
+	background-color: #f2f2f2
+
+.rating
+	+flexBlockRow
+	&__block img
+		width: 100%
+		max-width: 303px
+
+.form-callback
+	background-color: #FFFFFF
+	color: #000000
+	text-align: center
+	width: 100%
+	max-width: 480px
+	margin: auto
+	padding: 30px
+	position: relative
+	.block-btn
+		margin-bottom: 0
+
+.form-basket
+	width: 100%
+	max-width: 220px
+	margin-bottom: 20px
+	margin-right: -50px
+
+.title_form
+	color: $mainBlue
+	margin-bottom: 20px
+	+font-size(20px)
+
+.form-callback_oneclick
+	max-width: 380px
+	.btn
+		max-width: 185px
+		margin: auto
+		width: 100%
+
+.form-name
+	text-transform: uppercase
+	color: $mainBlue
+	+font-size(20px)
+	margin-bottom: 10px
+
+.form-subtitle
+	color: #737373
+	+font-size(11px)
+	text-align: left
+	width: 100%
+	line-height: 1.3
+	margin-bottom: 18px
+
+.field
+	width: 100%
+	margin-bottom: 18px
+	&__control
+		border: 1px solid #b7b7b7
+		border-radius: 5px
+		height: 30px
+		padding-left: 20px
+		width: 100%
+		text-align: left
+		&::placeholder
+			color: #737373
+			+font-size(13px)
+	textarea
+		border: 1px solid #b7b7b7
+		border-radius: 5px
+		height: 80px
+		width: 100%
+		text-align: left
+		padding: 10px 20px
+		&::placeholder
+			color: #737373
+			+font-size(13px)
+.texta
+	height: 80px
+	width: 100%
+	border: 1px solid #b7b7b7
+	margin-bottom: 25px
+	padding-left: 20px
+	border-radius: 10px
+
+.form-callback-accepted
+	max-width: 380px
+	margin: auto
+	span
+		display: block
+		margin-bottom: 10px
+		+font-size(13px)
+
+
+.accepted
+	margin-top: 70px
+	max-width: 500px
+	.form-basket
+		max-width: 500px

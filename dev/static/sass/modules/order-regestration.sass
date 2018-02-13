@@ -1,0 +1,291 @@
+.registration
+	padding: 40px 0
+	color: #333
+	.content_flex
+		align-items: flex-start
+
+.block-title
+	+font-size(20px)
+	margin-bottom: 30px
+
+.reg-blockleft
+	width: 72%
+
+.reg-blockright
+	width: 25%
+	border: 1px solid #b7b7b7
+
+.bnt-tab
+	+flexBlockRow
+	justify-content: space-around
+	.btn
+		width: 45%
+		text-align: center
+		background-color: transparent
+		background-image: none
+		color: $mainBlue
+		border: 1px solid $mainBlue
+		&_active
+			background-color: $mainBlue
+			color: #FFFFFF
+
+.reg-cont
+	padding: 20px 0
+	border-bottom: 1px solid #b7b7b7
+	padding-bottom: 30px
+
+.reg-input
+	+flexBlockRow
+	margin-bottom: 70px
+.block-input
+	width: 32%
+	position: relative
+	+flexBlockRow
+	justify-content: flex-start
+	label
+		+font-size(13px)
+		display: block
+		margin-right: 5px
+		color: #333
+		margin-bottom: 5px
+	input, select
+		color: #737373
+		height: 30px
+		border: 1px solid #b7b7b7
+		border-radius: 5px
+		padding-left: 15px
+		max-width: 210px
+		width: 100%
+		+font-size(13px)
+	&:nth-child(2)
+		margin-right: 30px
+.input-item
+	position: relative
+	width: 75%
+	input
+		max-width: 100%
+
+
+.error:after
+	content: "заполните это поле"
+	position: absolute
+	bottom: -15px
+	left: 0
+	display: block
+	z-index: 20
+	+font-size(13px)
+	color: red
+
+.checkbox
+	display: none
+
+.checkbox-custom
+	position: relative
+	width: 18px
+	height: 16px
+	border: 1px solid #ccc
+	border-radius: 50px
+	background-color: #eff2f4
+	margin-right: 10px
+
+
+.checkbox-custom,
+.label
+	display: inline-block
+	vertical-align: middle
+
+.label
+	width: 100%
+	text-align: left
+	+font-size(13px)
+	cursor: pointer
+
+.checkbox:checked + .checkbox-custom::before
+	content: ""
+	display: block
+	position: absolute
+	top: 2px
+	right: 2px
+	bottom: 2px
+	left: 2px
+	border-radius: 50px
+	background: $mainBlue
+
+.delivery
+	+flexBlockRow
+	justify-content: flex-start
+	align-items: center
+	.block-title
+		margin-bottom: 0
+		margin-right: 30px
+
+.delivery-btn
+	+flexBlockRow
+	justify-content: flex-start
+	margin-right: 30px
+
+.delivery_control
+	+flexBlockRow
+	align-items: center
+	flex-wrap: nowrap
+	margin-right: 20px
+
+.reg-contacts
+	+flexBlockRow
+	align-items: flex-start
+	padding: 30px 0
+
+.address
+	width: 60%
+	.reg-input
+		+flexBlockColumn
+		width: 100%
+		margin-bottom: 0
+	.block-input
+		justify-content: space-between
+		width: 100%
+		margin-bottom: 20px
+		.input-item
+			width: 100%
+			max-width: 73%
+		&:nth-child(2)
+			margin-right: 0
+	.input-item input, .input-item select
+		max-width: 100%
+
+
+.payment
+	width: 35%
+	+flexBlockColumn
+	.block-title
+		margin-bottom: 40px
+		width: 100%
+		text-align: left
+	.btn
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+		background-color: $mainBlue
+		background-image: none
+
+.btn_subtitle
+	width: 100%
+	.btn
+		background-color: transparent
+		color: $mainBlue
+		border: 1px solid $mainBlue
+		margin-bottom: 3px
+		background-image: none
+	span
+		display: block
+		text-align: center
+		width: 100%
+		margin-bottom: 20px
+		color: $mainBlue
+		+font-size(10px)
+
+.reg-blockright
+	padding: 30px 15px
+
+.prew
+	+flexBlockColumn
+	align-items: flex-start
+	&__title
+		+font-size(20px)
+		color: $orange
+		margin-bottom: 15px
+	&__count
+		+font-size(13px)
+		color: #737373
+		margin-bottom: 25px
+
+.product
+	+flexBlockRow
+	flex-wrap: nowrap
+	border-bottom: 1px solid #b7b7b7
+	padding-bottom: 20px
+	&__img
+		width: 100%
+		max-width: 130px
+	&__info
+		+flexBlockColumn
+		height: 100%
+		width: 100%
+		max-width: 135px
+
+	&__info-title
+		color: $mainBlue
+		+font-size(13px)
+		line-height: 1.3
+		margin-bottom: 50px
+		width: 100%
+.product__info-more
+	+flexBlockRow
+	width: 100%
+	+font-size(13px)
+	margin-bottom: 10px
+	span:last-child
+		font-weight: 600
+
+.block-more
+	width: 100%
+	margin-top: auto
+
+.block-more_result
+	padding-top: 30px
+
+.color-orange
+	color: $orange
+	+font-size(20px)
+
+.js-delivery-form.pickup
+	.courier
+		display: none
+
+.js-delivery-form.courier
+	.pickup
+		display: none
+.download
+	+flexBlockRow
+	justify-content: flex-start
+	margin-bottom: 20px
+	span
+		+font-size(13px)
+		display: block
+		margin-right: 20px
+
+.btn-order
+	width: 100%
+	display: block
+	max-width: 360px
+	text-align: center
+	margin: auto
+	+font-size(15px)
+
+//.fileContainer
+//	overflow: hidden
+//	position: relative
+//
+//
+//.fileContainer [type=file]
+//	cursor: inherit
+//	display: block
+//	font-size: 999px
+//	filter: alpha(opacity=0)
+//	min-height: 100%
+//	min-width: 100%
+//	opacity: 0
+//	position: absolute
+//	right: 0
+//	text-align: right
+//	top: 0
+.physical
+	.card-company
+		display: none
+
+.legal
+	.delivery, .reg-contacts
+		display: none
+	.reg-cont
+		border-bottom: none
+

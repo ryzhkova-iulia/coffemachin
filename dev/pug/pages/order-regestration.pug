@@ -1,0 +1,118 @@
+extends ../layout/main
+
+block title
+	| Главная страница
+
+block content
+	.container.registration
+		.content
+			.content_flex.js-type.physical
+				.reg-blockleft
+					.reg-cont
+						.block-title Тип плательщка
+						.bnt-tab
+							button(value="physical").btn.btn-physical.btn_active Физическое лицо
+							button(value="legal").btn.btn-legal  Юридическое лицо
+					.reg-cont
+						.block-title Данные получателя (обязательные):
+						.reg-input
+							.block-input
+								label Имя*
+								.input-item.error
+									input(type="text" placeholder="Иван")
+							.block-input
+								label Телефон*
+								.input-item
+									input(type="tel" placeholder="8(999)999-99-99")
+							.block-input
+								label E-mail*
+								.input-item
+									input(type="text" placeholder="send@domain.ru")
+						.delivery
+							.block-title Способ доставки:
+							.delivery-btn
+								label.delivery_control
+									input(type="radio" name="delivery" checked value="courier").checkbox
+									span.checkbox-custom
+									span.label Курьерская доставка - 300 руб/бесплатно
+								label.delivery_control
+									input(type="radio" name="delivery" value="pickup").checkbox
+									span.checkbox-custom
+									span.label Самовывоз - бесплатно
+						.card-company
+							.block-title Карточка организации:
+							.download
+								span Загрузите карточку организации
+								//span Выбрать файл
+								.upload
+					.reg-contacts.js-delivery-form.courier
+						.address
+							.block-title Адрес доставки:
+							.reg-input
+								.block-input
+									label Город*
+									.input-item.error
+										input(type="text" placeholder="Город")
+								.block-input.courier
+									label Улица*
+									.input-item
+										input(type="text" placeholder="Улица")
+								.block-input.courier
+									label Дом*
+									.input-item
+										input(type="text" placeholder="Дом")
+								.block-input.courier
+									label Квартира
+									.input-item
+										input(type="text" placeholder="Квартира")
+								.block-input.courier
+									label Индекс
+									.input-item
+										input(type="text" placeholder="Индекс")
+
+								.block-input.pickup
+									label Пункт самовывоза*
+									.input-item
+										select(type="tel" placeholder="Адрес пункта самовывоза")
+											option vvffvsv
+								.block-input
+									label Комментарий
+									.input-item
+										input(type="text" placeholder="Комментарий")
+						.payment
+							.block-title Выбор способа оплаты:
+							.btn Оплатить при получении
+							.btn_subtitle
+								.btn Банковская карта
+								span Данные карты заполняются на следующем шаге
+							.btn_subtitle
+								.btn.btn_subtitle Квитанция для банка
+								span Данные заполняются на следующем шаге
+
+					a(href="./order-accept.html").btn.btn_orange.btn-order Оформить заказ
+				.reg-blockright
+					.prew
+						.prew__title КОРЗИНА
+						.prew__count 1 товар
+						.product
+							img(src="./static/img/general/model.png").product__img
+							.product__info
+								.product__info-title Кофеварка Polaris PCM 0613A
+								.block-more
+									.product__info-more
+										span Цена
+										span 2 590 ₽
+									.product__info-more
+										span Количество
+										span 1 шт
+						.block-more.block-more_result
+							.product__info-more
+								span Цена без скидки
+								span 2 590 ₽
+							.product__info-more
+								span К оплате
+								span.color-orange 2590 ₽
+
+
+
+

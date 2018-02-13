@@ -1,6 +1,71 @@
 @media screen and (max-width: 1300px)
 	.content
 		padding: 0 15px
+	.catalog-item
+		margin: 0 20px 10px
+	.catalog-item:nth-child(3n+3)
+		margin: 0 20px 10px
+
+@media screen and (max-width: 1280px)
+	.catalog
+		+flexBlockRow
+		justify-content: space-between
+	.catalog-item
+		max-width: 49%
+		margin: 0
+		margin-bottom: 15px
+	.catalog-item:nth-child(3n+3)
+		margin: 0
+		margin-bottom: 15px
+	.block-input label
+		margin-bottom: 10px
+	.block-input
+		+flexBlockColumn
+		align-items: flex-start
+		input
+			max-width: 100%
+	.address .block-input input, .address .block-input select
+		max-width: 100%
+	.block-input:nth-child(2)
+		margin-right: 0
+
+@media screen and (max-width: 1024px)
+	.adv-item
+		width: 49.2%
+		margin-bottom: 15px
+	.adv-item:last-child
+		margin-bottom: 0
+	.disclaimer
+		max-width: 100%
+	.block-input
+		width: 49%
+		margin-bottom: 30px
+	.input-item
+		width: 100%
+	.product
+		+flexBlockColumn
+		img
+			margin-bottom: 20px
+	.delivery .block-title
+		margin-bottom: 30px
+
+@media screen and (max-width: 930px)
+	.main-cont
+		+flexBlockColumn
+		flex-direction: column-reverse
+	.catalog, .filter
+		width: 100%
+	.filter
+		margin-bottom: 40px
+		display: none
+	.show-filter
+		display: flex
+
+@media screen and (max-width: 800px)
+	.orders
+		flex-direction: column-reverse
+	.order, .promo
+		width: 100%
 
 @media screen and (max-width: 771px)
 	header
@@ -25,6 +90,72 @@
 			width: 100%
 			height: 100%
 			background-size: contain
+	.video
+		padding-bottom: 45%
+	.adv-item
+		width: 100%
+	.catalog_list
+		.catalog-item__cont
+			flex-direction: column
+		.catalog-item__price
+			order: 0
+			width: 100%
+			text-align: left
+		.catalog-item__name
+			max-width: 100%
+		.catalog-item__list
+			width: 100%
+			text-align: left
+		.catalog-item__btn
+			text-align: left
+		.line
+			display: block
+	.detail-box
+		+flexBlockColumn
+	.detail-box__left, .detail-box__right
+		width: 100%
+	.order-item
+		+flexBlockColumn
+	.order-item__info
+		padding: 20px 0
+	.order-item__price
+		margin-right: auto
+	.reg-blockleft, .reg-blockright, .product
+		width: 100%
+	.reg-input
+		margin-bottom: 30px
+	.delivery_control
+		margin-bottom: 10px
+	.block-input
+		width: 100%
+	.address .block-input .input-item
+		max-width: 100%
+	.address .block-input
+		margin-bottom: 30px
+	.bnt-tab .btn
+		+font-size(16px)
+	.btn-order
+		margin-bottom: 30px
+		order: 1
+	.address .block-input:last-child
+		margin-bottom: 0
+	.registration .content_flex
+		+flexBlockColumn
+		flex-direction: column-reverse
+
+@media screen and (max-width: 570px)
+	.catalog-item
+		max-width: 100%
+	footer
+		.content_flex
+			flex-direction: column
+	.disclaimer
+		max-width: 100%
+		text-align: center
+	.footer-item
+		align-items: center
+	.button
+		width: 36px
 
 
 @media screen and (max-width: 463px)
@@ -34,3 +165,32 @@
 	.serch
 		input
 			max-width: 167px
+	.block-btn
+		.btn
+			width: 100%
+			margin-bottom: 10px
+	.address, .payment
+		width: 100%
+	.address
+		margin-bottom: 40px
+
+
+@media screen and (max-width: 415px)
+	.catalog-item
+		max-width: 100%
+	.block-sett, .show-filter
+		margin-left: 0
+	.block-sett
+		width: 100%
+		padding: 0
+	.show-filter
+		max-width: 100%
+		margin-right: 0
+	.adv-item
+		padding-right: 10px
+	.adv-item__info
+		max-width: 135px
+
+@media screen and (max-width: 380px)
+	.result-sum
+		margin-bottom: 20px

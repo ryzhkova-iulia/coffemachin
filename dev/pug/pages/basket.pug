@@ -1,0 +1,69 @@
+
+
+.block-basket
+	.breadcrumbs
+		.breadcrumbs__item.breadcrumbs__item_orange корзина
+		.breadcrumbs__item.breadcrumbs__item_active оформление заказа
+		.breadcrumbs__item подтверждение
+	.orders
+		.order
+			.order-item
+				.order-item__img
+					img(src="./static/img/general/model.png")
+				.order-item__info
+					.order-item__info-name Кофеварка Polaris PCM 0613A
+					.order-item__list
+						li артикул: 5100000545
+						li Тип: Капельная
+						li Мощность, Вт: 550 Вт
+						li Противокапельная система
+				.order-item__price
+					span 1 799 ₽
+					.order-count
+						input.btn-count.count__minus.uk-button.qtyminus(type='button', value='-', field='quantity', data-type='minus', data-field='quant[1]', onclick="setQuantity(33250, 1, 'down', false);")
+						input#QUANTITY_INPUT_33250.count__input.qty.quantity(name='QUANTITY_INPUT_33250', min='0', max='8', step='1', value='1', onchange="updateQuantity('QUANTITY_INPUT_33250', '33250', 1, false)")
+						input.btn-count.count__plus.uk-button.qtyplus(type='button', value='+', field='quantity', data-type='plus', data-field='quant[1]', onclick="setQuantity(33250, 1, 'up', false);")
+						input#QUANTITY_33250(type='hidden', name='QUANTITY_33250', value='1')
+
+					.order-delete Удалить
+			.order-item
+				.order-item__img
+					img(src="./static/img/general/model.png")
+				.order-item__info
+					.order-item__info-name Кофеварка Polaris PCM 0613A
+					.order-item__list
+						li артикул: 5100000545
+						li Тип: Капельная
+						li Мощность, Вт: 550 Вт
+						li Противокапельная система
+				.order-item__price
+					span 1 799 ₽
+					.order-count
+						input.btn-count.count__minus.uk-button.qtyminus(type='button', value='-', field='quantity', data-type='minus', data-field='quant[1]', onclick="setQuantity(33250, 1, 'down', false);")
+						input#QUANTITY_INPUT_33250.count__input.qty.quantity(name='QUANTITY_INPUT_33250', min='0', max='8', step='1', value='1', onchange="updateQuantity('QUANTITY_INPUT_33250', '33250', 1, false)")
+						input.btn-count.count__plus.uk-button.qtyplus(type='button', value='+', field='quantity', data-type='plus', data-field='quant[1]', onclick="setQuantity(33250, 1, 'up', false);")
+						input#QUANTITY_33250(type='hidden', name='QUANTITY_33250', value='1')
+
+					.order-delete Удалить
+			.result
+				.result-sum
+					.result-sum__title Заказ:
+					.result-sum__price 2590 ₽
+				.result-registration
+					span Доставка: <br>
+						| (рассчитана ориентировочно)<br>
+						| Бесплатная доставка в г. Москва
+					a(href="./order-regestration.html").btn.btn_transparent Перейти к оформлению
+			.back.js-popup-close
+				span Вернуться в магазин
+		.promo
+			.promo__title Активировать промо-код
+			input
+			.btn.btn_blue активировать
+
+	script(type="text/javascript").
+		$(document).ready(function () {
+			$(".js-popup-close").on("click", function () {
+				$.magnificPopup.close();
+			});
+		});

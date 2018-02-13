@@ -1,0 +1,76 @@
+
+<div class="block-basket">
+  <div class="breadcrumbs">
+    <div class="breadcrumbs__item breadcrumbs__item_orange">корзина</div>
+    <div class="breadcrumbs__item breadcrumbs__item_active">оформление заказа</div>
+    <div class="breadcrumbs__item">подтверждение</div>
+  </div>
+  <div class="orders">
+    <div class="order">
+      <div class="order-item">
+        <div class="order-item__img"><img src="./static/img/general/model.png"/></div>
+        <div class="order-item__info">
+          <div class="order-item__info-name">Кофеварка Polaris PCM 0613A</div>
+          <div class="order-item__list">
+            <li>артикул: 5100000545</li>
+            <li>Тип: Капельная</li>
+            <li>Мощность, Вт: 550 Вт</li>
+            <li>Противокапельная система</li>
+          </div>
+        </div>
+        <div class="order-item__price"><span>1 799 ₽</span>
+          <div class="order-count">
+            <input class="btn-count count__minus uk-button qtyminus" type="button" value="-" field="quantity" data-type="minus" data-field="quant[1]" onclick="setQuantity(33250, 1, 'down', false);"/>
+            <input class="count__input qty quantity" id="QUANTITY_INPUT_33250" name="QUANTITY_INPUT_33250" min="0" max="8" step="1" value="1" onchange="updateQuantity('QUANTITY_INPUT_33250', '33250', 1, false)"/>
+            <input class="btn-count count__plus uk-button qtyplus" type="button" value="+" field="quantity" data-type="plus" data-field="quant[1]" onclick="setQuantity(33250, 1, 'up', false);"/>
+            <input id="QUANTITY_33250" type="hidden" name="QUANTITY_33250" value="1"/>
+          </div>
+          <div class="order-delete">Удалить</div>
+        </div>
+      </div>
+      <div class="order-item">
+        <div class="order-item__img"><img src="./static/img/general/model.png"/></div>
+        <div class="order-item__info">
+          <div class="order-item__info-name">Кофеварка Polaris PCM 0613A</div>
+          <div class="order-item__list">
+            <li>артикул: 5100000545</li>
+            <li>Тип: Капельная</li>
+            <li>Мощность, Вт: 550 Вт</li>
+            <li>Противокапельная система</li>
+          </div>
+        </div>
+        <div class="order-item__price"><span>1 799 ₽</span>
+          <div class="order-count">
+            <input class="btn-count count__minus uk-button qtyminus" type="button" value="-" field="quantity" data-type="minus" data-field="quant[1]" onclick="setQuantity(33250, 1, 'down', false);"/>
+            <input class="count__input qty quantity" id="QUANTITY_INPUT_33250" name="QUANTITY_INPUT_33250" min="0" max="8" step="1" value="1" onchange="updateQuantity('QUANTITY_INPUT_33250', '33250', 1, false)"/>
+            <input class="btn-count count__plus uk-button qtyplus" type="button" value="+" field="quantity" data-type="plus" data-field="quant[1]" onclick="setQuantity(33250, 1, 'up', false);"/>
+            <input id="QUANTITY_33250" type="hidden" name="QUANTITY_33250" value="1"/>
+          </div>
+          <div class="order-delete">Удалить</div>
+        </div>
+      </div>
+      <div class="result">
+        <div class="result-sum">
+          <div class="result-sum__title">Заказ:</div>
+          <div class="result-sum__price">2590 ₽</div>
+        </div>
+        <div class="result-registration"><span>
+            Доставка: <br>(рассчитана ориентировочно)<br>
+            Бесплатная доставка в г. Москва</span><a class="btn btn_transparent" href="./order-regestration.html">Перейти к оформлению</a></div>
+      </div>
+      <div class="back js-popup-close"><span>Вернуться в магазин</span></div>
+    </div>
+    <div class="promo">
+      <div class="promo__title">Активировать промо-код</div>
+      <input/>
+      <div class="btn btn_blue">активировать</div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+    	$(".js-popup-close").on("click", function () {
+    		$.magnificPopup.close();
+    	});
+    });
+  </script>
+</div>

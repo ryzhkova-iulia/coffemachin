@@ -27,6 +27,19 @@ body
   -webkit-tap-highlight-color: transparent /* For some Androids */
   outline: none
 
+// footer to bottom
+body
+  display: flex
+  flex-direction: column
+  height: 100vh
+
+header, footer
+  flex-shrink: 0
+
+.wrapper
+  flex: 1 0 auto
+//end
+
 
 h1,h2,h3,h4,h5,h6
   margin: 0
@@ -139,6 +152,12 @@ button
 
 // Стили главной страницы
 @import 'page/_index.sass'
+
+@import 'modules/detale.sass'
+
+@import 'modules/basket.sass'
+
+@import 'modules/order-regestration.sass'
 
 // Стили футера
 @import 'modules/_footer.sass'

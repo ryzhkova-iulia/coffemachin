@@ -1,0 +1,104 @@
+
+.detail
+	.detail-box
+		.detail-box__left
+			.title Кофеварка Polaris PCM 0613A
+			.block-adv
+				.block-adv__item.block-adv_gar
+				.block-adv__item.block-adv_hit
+				.block-adv__item.block-adv_new
+			.block-btn
+				.btn(data-mfp-src="#popup-form-oneclick").btn_orange.mfp-inline.js-popup-modal Купить в один клик
+				.btn.btn_blue.js__pop-add(data-header="Кофеварка Polaris PCM 0613A") Добавить в корзину
+			ul.detail-info
+				li Шкала уровня воды.
+				li Защита от перегрева.
+				li Вместимость: 5-7 чашек.
+				li Стеклянная колба.
+				li Съемный моющийся фильтр.
+				li Мерная ложка в комплекте.
+				li Прорезиненные ножки.
+				li Корпус из нержавеющей стали.
+				li Функция поддержания температуры.
+				li Противокапельная система.
+			.characteristics
+				.characteristics__title Технические характеристики
+				.characteristics__item
+					span Тип
+					span Капельная
+				.characteristics__item
+					span Мощность, Вт
+					span 550 Вт
+				.characteristics__item
+					span Противокапельная система
+					span Есть
+				.show-more.characteristics__item.characteristics_more
+					span Подробнее
+					i.fa.fa-angle-down
+				.characteristics__item.hide
+					span Мощность, Вт
+					span 550 Вт
+				.characteristics__item.hide
+					span Противокапельная система
+					span Есть
+
+		.detail-box__right
+			.slider-for
+				a(href="./static/img/content/model1.jpg" data-fancybox="images" data-type="image")
+					img(src="./static/img/content/model1.jpg")
+				a(href="./static/img/content/model1.jpg" data-fancybox="images" data-type="image")
+					img(src="./static/img/content/model1.jpg")
+				a(href="./static/img/content/model1.jpg" data-fancybox="images" data-type="image")
+					img(src="./static/img/content/model1.jpg")
+			.slider-nav
+				img(src="./static/img/content/model1.jpg")
+				img(src="./static/img/content/model1.jpg")
+				img(src="./static/img/content/model1.jpg")
+
+	script(type="text/javascript").
+		setTimeout(function () {
+			$('.slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: '.slider-nav'
+			});
+			$('.slider-nav').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				asNavFor: '.slider-for',
+				dots: true,
+				centerMode: true,
+				focusOnSelect: true
+			});
+		}, 500);
+
+		$(document).ready(function () {
+			$(".show-more").on("click", function () {
+				$(this).parent().find(".hide").removeClass("hide");
+				$(this).css("display", "none");
+			});
+
+			$(".detail .js-popup-modal").magnificPopup({
+				closeOnContentClick: false,
+				overflowY: 'scroll'
+			});
+
+			$('.detail .js__pop-add').magnificPopup({
+				items: {
+					src: '#popup-form-add',
+					type: 'inline'
+				},
+				callbacks: {
+					elementParse: function (item) {
+
+						var mp = $.magnificPopup.instance,
+							cur = mp.st.el,
+							title = cur.attr('data-header');
+
+						$(item.src).find('.title_form').text(title);
+					}
+				}
+			});
+		});

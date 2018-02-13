@@ -14,3 +14,33 @@
 	color: $mainBlue
 	margin-bottom: 30px
 	display: block
+
+.btn
+	background-image: linear-gradient( to right, #1d3f77 0%, #536d97 100%)
+	color: #FFFFFF
+	+font-size(16px)
+	font-family: 'Museo Sans Cyrl 300'
+	padding: 14px 0 16px
+	cursor: pointer
+	border: none
+	&_black
+		background-image: linear-gradient( to right, #363636 0%, #363636 100%)
+	&_orange
+		background-image: linear-gradient( to right, #ff6c14 0%, #ff8d49 100%)
+		&:hover
+			background-image: linear-gradient( to right, #1d3f77 0%, #1d3f77 100%)
+	&_blue
+		background-image: linear-gradient( to right, #1d3f77 0%, #1d3f77 100%)
+		&:hover
+			background-image: linear-gradient( to right, #ff6c14 0%, #ff6c14 100%)
+	&_transparent
+		background-color: transparent
+		background-image: none
+		color: #333
+		border: 1px solid #ccc
+		text-transform: uppercase
+		font-weight: 600
+		padding: 10px 20px
+		text-align: center
+		&:hover
+			color: $mainBlue
