@@ -128,6 +128,7 @@ gulp.task('img', function() {
 
         })))
         .pipe(gulp.dest('docs/static/img'));
+
 });
 
 // Сборка проекта
