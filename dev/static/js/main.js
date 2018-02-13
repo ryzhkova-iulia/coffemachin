@@ -23,6 +23,16 @@ $(document).ready(function () {
         $(this).toggleClass("arrow-down");
     });
 
+    $(document).load($(window).bind("resize", checkPosition));
+    function checkPosition()
+    {
+        if($( window ).width() > 930) {
+            $(".filter").css("display", "block");
+        }  else if($( window ).width() < 930) {
+            $(".filter").css("display", "none");
+        }
+    }
+
     $(".show-filter").on("click", function () {
         $(".filter").slideToggle();
         $(".filter-item__cont").css("display", "none");
