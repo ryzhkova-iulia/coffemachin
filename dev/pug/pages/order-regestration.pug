@@ -6,7 +6,7 @@ block title
 block content
 	.container.registration
 		.content
-			.content_flex.js-type.physical
+			form(name="order").content_flex.js-type.physical
 				.reg-blockleft
 					.reg-cont
 						.block-title Тип плательщка
@@ -19,15 +19,15 @@ block content
 							.block-input
 								label Имя*
 								.input-item.error
-									input(type="text" placeholder="Иван")
+									input(type="text" placeholder="Иван" required)
 							.block-input
 								label Телефон*
 								.input-item
-									input(type="tel" placeholder="8(999)999-99-99")
+									input(type="tel" name="phone" required placeholder="8(999)999-99-99")
 							.block-input
 								label E-mail*
 								.input-item
-									input(type="text" placeholder="send@domain.ru")
+									input(type="text" required placeholder="send@domain.ru")
 						.delivery
 							.block-title Способ доставки:
 							.delivery-btn
@@ -43,8 +43,9 @@ block content
 							.block-title Карточка организации:
 							.download
 								span Загрузите карточку организации
-								//span Выбрать файл
+								span.download__choose Выбрать файл
 								.upload
+								ul.filelist.queue
 					.reg-contacts.js-delivery-form.courier
 						.address
 							.block-title Адрес доставки:
@@ -52,15 +53,15 @@ block content
 								.block-input
 									label Город*
 									.input-item.error
-										input(type="text" placeholder="Город")
+										input(type="text" required placeholder="Город")
 								.block-input.courier
 									label Улица*
 									.input-item
-										input(type="text" placeholder="Улица")
+										input(type="text" required placeholder="Улица")
 								.block-input.courier
 									label Дом*
 									.input-item
-										input(type="text" placeholder="Дом")
+										input(type="text" required placeholder="Дом")
 								.block-input.courier
 									label Квартира
 									.input-item
@@ -74,7 +75,7 @@ block content
 									label Пункт самовывоза*
 									.input-item
 										select(type="tel" placeholder="Адрес пункта самовывоза")
-											option vvffvsv
+											option Москва
 								.block-input
 									label Комментарий
 									.input-item

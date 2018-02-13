@@ -27,7 +27,7 @@
     <div class="wrapper">
       <div class="container registration">
         <div class="content">
-          <div class="content_flex js-type physical">
+          <form class="content_flex js-type physical" name="order">
             <div class="reg-blockleft">
               <div class="reg-cont">
                 <div class="block-title">Тип плательщка</div>
@@ -42,19 +42,19 @@
                   <div class="block-input">
                     <label>Имя*</label>
                     <div class="input-item error">
-                      <input type="text" placeholder="Иван">
+                      <input type="text" placeholder="Иван" required>
                     </div>
                   </div>
                   <div class="block-input">
                     <label>Телефон*</label>
                     <div class="input-item">
-                      <input type="tel" placeholder="8(999)999-99-99">
+                      <input type="tel" name="phone" required placeholder="8(999)999-99-99">
                     </div>
                   </div>
                   <div class="block-input">
                     <label>E-mail*</label>
                     <div class="input-item">
-                      <input type="text" placeholder="send@domain.ru">
+                      <input type="text" required placeholder="send@domain.ru">
                     </div>
                   </div>
                 </div>
@@ -71,9 +71,9 @@
                 </div>
                 <div class="card-company">
                   <div class="block-title">Карточка организации:</div>
-                  <div class="download"><span>Загрузите карточку организации</span>
-                    <!--span Выбрать файл-->
+                  <div class="download"><span>Загрузите карточку организации</span><span class="download__choose">Выбрать файл</span>
                     <div class="upload"></div>
+                    <ul class="filelist queue"></ul>
                   </div>
                 </div>
               </div>
@@ -84,19 +84,19 @@
                     <div class="block-input">
                       <label>Город*</label>
                       <div class="input-item error">
-                        <input type="text" placeholder="Город">
+                        <input type="text" required placeholder="Город">
                       </div>
                     </div>
                     <div class="block-input courier">
                       <label>Улица*</label>
                       <div class="input-item">
-                        <input type="text" placeholder="Улица">
+                        <input type="text" required placeholder="Улица">
                       </div>
                     </div>
                     <div class="block-input courier">
                       <label>Дом*</label>
                       <div class="input-item">
-                        <input type="text" placeholder="Дом">
+                        <input type="text" required placeholder="Дом">
                       </div>
                     </div>
                     <div class="block-input courier">
@@ -115,7 +115,7 @@
                       <label>Пункт самовывоза*</label>
                       <div class="input-item">
                         <select type="tel" placeholder="Адрес пункта самовывоза">
-                          <option>vvffvsv</option>
+                          <option>Москва</option>
                         </select>
                       </div>
                     </div>
@@ -158,7 +158,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
