@@ -2673,9 +2673,6 @@ p {
 .legal .reg-cont {
   border-bottom: none; }
 
-.product {
-  display: none; }
-
 .prew__show {
   cursor: pointer; }
 
@@ -2825,7 +2822,8 @@ footer {
   .input-item {
     width: 100%; }
   .product {
-    flex-direction: column; }
+    flex-direction: column;
+    display: none; }
     .product img {
       margin-bottom: 20px; }
   .delivery .block-title {

@@ -28,8 +28,10 @@ $(document).ready(function () {
     {
         if($( window ).width() > 930) {
             $(".filter").css("display", "block");
+            // $(".product").css("display", "block");
         }  else if($( window ).width() < 930) {
             $(".filter").css("display", "none");
+            // $(".product").css("display", "none");
         }
     }
 
@@ -43,6 +45,13 @@ $(document).ready(function () {
         $(this).parent().find(".hide").removeClass("hide");
         $(this).css("display", "none");
     });
+
+    // busket show-hide
+    $(".prew__show").on("click", function () {
+        $(this).parent().toggleClass("js-product-show");
+        $(this).parent().find(".product").slideToggle().css("display", "flex");
+    });
+
 
     $(".block-sett__list").on("click", function () {
        $(".catalog").addClass("catalog_list");
@@ -249,13 +258,6 @@ $(document).ready(function () {
         console.log("Chunk Error");
     }
 
-
-    // busket show-hide
-
-    $(".prew__show").on("click", function () {
-        $(this).parent().toggleClass("js-product-show");
-        $(this).parent().find(".product").slideToggle().css("display", "flex");
-    });
 });
 
 
