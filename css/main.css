@@ -2581,7 +2581,8 @@ p {
   flex-wrap: wrap;
   flex-wrap: nowrap;
   border-bottom: 1px solid #b7b7b7;
-  padding: 20px 0; }
+  padding: 20px 0;
+  width: 100%; }
   .product__img {
     width: 100%;
     max-width: 130px; }

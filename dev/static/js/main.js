@@ -35,6 +35,16 @@ $(document).ready(function () {
         }
     }
 
+    $(document).load($(window).bind("resize", productPos));
+    function productPos()
+    {
+        if($( window ).width() > 768) {
+            $(".product").css("display", "flex");
+        }  else if($( window ).width() < 768) {
+            $(".product").css("display", "none");
+        }
+    }
+
     $(".show-filter").on("click", function () {
         $(".filter").slideToggle();
         $(".filter-item__cont").css("display", "none");
