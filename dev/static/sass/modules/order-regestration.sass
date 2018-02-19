@@ -197,13 +197,13 @@
 	&__count
 		+font-size(13px)
 		color: #737373
-		margin-bottom: 25px
+		//margin-bottom: 25px
 
 .product
 	+flexBlockRow
 	flex-wrap: nowrap
 	border-bottom: 1px solid #b7b7b7
-	padding-bottom: 20px
+	padding: 20px 0
 	&__img
 		width: 100%
 		max-width: 130px
@@ -274,23 +274,7 @@
 	margin: auto
 	+font-size(15px)
 
-//.fileContainer
-//	overflow: hidden
-//	position: relative
-//
-//
-//.fileContainer [type=file]
-//	cursor: inherit
-//	display: block
-//	font-size: 999px
-//	filter: alpha(opacity=0)
-//	min-height: 100%
-//	min-width: 100%
-//	opacity: 0
-//	position: absolute
-//	right: 0
-//	text-align: right
-//	top: 0
+
 .physical
 	.card-company
 		display: none
@@ -301,3 +285,21 @@
 	.reg-cont
 		border-bottom: none
 
+.product
+	display: none
+
+.prew__show
+	cursor: pointer
+
+.prew__show:after
+	content: "\f107"
+	font: normal normal normal 18px/1 FontAwesome
+	display: inline-block
+	margin-left: 15px
+	color: $mainBlue
+	font-weight: bold
+	transition: .3s
+
+.js-product-show .prew__show:after
+	transform: rotate(180deg)
+	transition: .3s

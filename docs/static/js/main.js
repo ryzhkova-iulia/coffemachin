@@ -249,6 +249,13 @@ $(document).ready(function () {
         console.log("Chunk Error");
     }
 
+
+    // busket show-hide
+
+    $(".prew__show").on("click", function () {
+        $(this).parent().toggleClass("js-product-show");
+        $(this).parent().find(".product").slideToggle().css("display", "flex");
+    });
 });
 
 

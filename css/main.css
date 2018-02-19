@@ -2572,8 +2572,7 @@ p {
   .prew__count {
     font-size: 13px;
     font-size: 0.8125rem;
-    color: #737373;
-    margin-bottom: 25px; }
+    color: #737373; }
 
 .product {
   display: flex;
@@ -2582,7 +2581,7 @@ p {
   flex-wrap: wrap;
   flex-wrap: nowrap;
   border-bottom: 1px solid #b7b7b7;
-  padding-bottom: 20px; }
+  padding: 20px 0; }
   .product__img {
     width: 100%;
     max-width: 130px; }
@@ -2673,6 +2672,25 @@ p {
 
 .legal .reg-cont {
   border-bottom: none; }
+
+.product {
+  display: none; }
+
+.prew__show {
+  cursor: pointer; }
+
+.prew__show:after {
+  content: "\f107";
+  font: normal normal normal 18px/1 FontAwesome;
+  display: inline-block;
+  margin-left: 15px;
+  color: #193b78;
+  font-weight: bold;
+  transition: .3s; }
+
+.js-product-show .prew__show:after {
+  transform: rotate(180deg);
+  transition: .3s; }
 
 footer {
   padding: 25px 0;
@@ -2807,10 +2825,7 @@ footer {
   .input-item {
     width: 100%; }
   .product {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; }
+    flex-direction: column; }
     .product img {
       margin-bottom: 20px; }
   .delivery .block-title {
