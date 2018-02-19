@@ -2677,17 +2677,13 @@ p {
 .prew__show {
   cursor: pointer; }
 
-.prew__show:after {
+.js-product-show .prew__show:after {
   content: "\f107";
   font: normal normal normal 18px/1 FontAwesome;
   display: inline-block;
   margin-left: 15px;
   color: #193b78;
   font-weight: bold;
-  transition: .3s; }
-
-.js-product-show .prew__show:after {
-  transform: rotate(180deg);
   transition: .3s; }
 
 footer {
@@ -2823,12 +2819,13 @@ footer {
   .input-item {
     width: 100%; }
   .product {
-    flex-direction: column;
-    display: none; }
+    flex-direction: column; }
     .product img {
       margin-bottom: 20px; }
   .delivery .block-title {
-    margin-bottom: 30px; } }
+    margin-bottom: 30px; }
+  .js-product-show .product {
+    display: none; } }
 
 @media screen and (max-width: 930px) {
   .main-cont {

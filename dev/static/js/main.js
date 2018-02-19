@@ -28,10 +28,8 @@ $(document).ready(function () {
     {
         if($( window ).width() > 930) {
             $(".filter").css("display", "block");
-            // $(".product").css("display", "block");
         }  else if($( window ).width() < 930) {
             $(".filter").css("display", "none");
-            // $(".product").css("display", "none");
         }
     }
 
@@ -39,9 +37,9 @@ $(document).ready(function () {
     function productPos()
     {
         if($( window ).width() > 768) {
-            $(".product").css("display", "flex");
+            $(".js-product-show .product").css("display", "flex");
         }  else if($( window ).width() < 768) {
-            $(".product").css("display", "none");
+            $(".js-product-show .product").css("display", "none");
         }
     }
 
@@ -58,8 +56,9 @@ $(document).ready(function () {
 
     // busket show-hide
     $(".prew__show").on("click", function () {
-        $(this).parent().toggleClass("js-product-show");
-        $(this).parent().find(".product").slideToggle().css("display", "flex");
+        // $(this).parent().toggleClass("js-product-show");
+        // $(this).parent().find(".product").slideToggle().css("display", "flex");
+        $(".js-product-show").find(".product").slideToggle().css("display", "flex");
     });
 
 

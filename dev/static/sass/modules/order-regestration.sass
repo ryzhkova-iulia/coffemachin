@@ -286,21 +286,20 @@
 	.reg-cont
 		border-bottom: none
 
-//.product
-//	display: none
 
 .prew__show
 	cursor: pointer
 
-.prew__show:after
-	content: "\f107"
-	font: normal normal normal 18px/1 FontAwesome
-	display: inline-block
-	margin-left: 15px
-	color: $mainBlue
-	font-weight: bold
-	transition: .3s
 
-.js-product-show .prew__show:after
-	transform: rotate(180deg)
-	transition: .3s
+.js-product-show
+	.prew__show:after
+		content: "\f107"
+		font: normal normal normal 18px/1 FontAwesome
+		display: inline-block
+		margin-left: 15px
+		color: $mainBlue
+		font-weight: bold
+		transition: .3s
+	//.prew__show:after
+	//	transform: rotate(180deg)
+	//	transition: .3s
