@@ -15,7 +15,6 @@ var gulp = require('gulp'),
     newer = require("gulp-newer"),
     autoprefixer = require('gulp-autoprefixer'),
     sass = require('gulp-sass');
-    postcss = require('postcss');
 
 
 // sass
@@ -27,9 +26,7 @@ gulp.task('sass', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'))
 
-        .pipe(autoprefixer({
-            browsers: ['> 0%', 'last 2 versions', 'Firefox >= 20', 'iOS >=7']
-        }))
+        .pipe(autoprefixer())
         .pipe(cssnano())
         .pipe(gulp.dest('dev/static/css'))
 
