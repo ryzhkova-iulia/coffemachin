@@ -1182,7 +1182,8 @@ button {
   text-transform: uppercase;
   color: #193b78;
   margin-bottom: 30px;
-  display: block; }
+  display: block;
+  text-align: center; }
 
 .btn {
   background-image: linear-gradient(to right, #1d3f77 0%, #536d97 100%);
@@ -2025,6 +2026,31 @@ p {
   .accepted .form-basket {
     max-width: 500px; }
 
+.callback-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 920px;
+  margin: auto;
+  margin-top: 30px; }
+  .callback-form .block-input, .callback-form .btn {
+    max-width: 32%;
+    width: 100%; }
+  .callback-form .block-input:nth-child(2) {
+    margin-right: 0; }
+  .callback-form .input-item {
+    width: 100%; }
+  .callback-form .btn {
+    padding: 7px 0;
+    font-size: 14px;
+    font-size: 0.875rem; }
+
+.title_less {
+  text-transform: none; }
+
 .detail {
   width: 100%;
   max-width: 1187px;
@@ -2857,6 +2883,14 @@ footer {
     margin-top: 20px; } }
 
 @media screen and (max-width: 768px) {
+  .callback-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; }
+    .callback-form .block-input, .callback-form .btn {
+      max-width: 100%;
+      width: 100%; }
   .slider .slick-next {
     width: 32px;
     height: 32px;
