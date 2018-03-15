@@ -1498,7 +1498,6 @@ header {
   position: relative;
   border: 1px solid #b7b7b7;
   border-bottom: none;
-  width: 100%;
   max-width: 285px;
   text-align: center;
   margin-right: 3px;
@@ -2049,8 +2048,7 @@ p {
   margin: auto;
   margin-top: 30px; }
   .callback-form .block-input, .callback-form .btn {
-    max-width: 32%;
-    width: 100%; }
+    width: 32%; }
   .callback-form .block-input:nth-child(2) {
     margin-right: 0; }
   .callback-form .input-item {
@@ -2922,7 +2920,6 @@ footer {
     justify-content: space-between;
     align-items: center; }
     .callback-form .block-input, .callback-form .btn {
-      max-width: 100%;
       width: 100%; }
   .slider .slick-next {
     width: 32px;
@@ -3004,7 +3001,8 @@ footer {
 
 @media screen and (max-width: 570px) {
   .catalog-item {
-    max-width: 100%; }
+    max-width: 100%;
+    width: 100%; }
   footer .content_flex {
     flex-direction: column; }
   .disclaimer {
