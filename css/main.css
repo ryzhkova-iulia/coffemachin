@@ -1173,6 +1173,7 @@ button {
   .content_flex {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap; }
 
@@ -1246,12 +1247,14 @@ header {
 .block-right {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap; }
 
 .serch {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   flex-wrap: nowrap;
@@ -1380,6 +1383,7 @@ header {
   margin-left: auto;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap; }
   .block-sett__item {
@@ -1395,6 +1399,7 @@ header {
     display: inline-block;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     width: 128px; }
@@ -1430,6 +1435,7 @@ header {
     box-sizing: content-box;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap; }
     .block-sett__grid span {
@@ -1452,6 +1458,7 @@ header {
 .main-cont {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -1461,6 +1468,7 @@ header {
   width: 74%;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around; }
@@ -1476,6 +1484,7 @@ header {
     .catalog_list .catalog-item__cont {
       display: flex;
       justify-content: space-between;
+      flex-direction: row;
       align-items: center;
       flex-wrap: wrap; }
     .catalog_list .catalog-item__name, .catalog_list catalog-item__list {
@@ -1888,6 +1897,7 @@ p {
 .adv {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   padding: 40px 0; }
@@ -1924,6 +1934,7 @@ p {
 .rating {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap; }
   .rating__block img {
@@ -2029,6 +2040,7 @@ p {
 .callback-form {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -2062,6 +2074,7 @@ p {
 .detail-box {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   align-items: flex-start; }
@@ -2075,6 +2088,7 @@ p {
 .block-adv {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -2107,6 +2121,7 @@ p {
 .block-btn {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 20px; }
@@ -2143,6 +2158,7 @@ p {
   .characteristics__item {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
@@ -2187,6 +2203,7 @@ p {
 .breadcrumbs {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -2208,6 +2225,7 @@ p {
 .orders {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   align-items: flex-start; }
@@ -2215,6 +2233,7 @@ p {
 .order-item {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
@@ -2279,6 +2298,7 @@ p {
   position: relative;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -2322,6 +2342,7 @@ p {
   padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   align-items: flex-start; }
@@ -2384,6 +2405,7 @@ p {
 .bnt-tab {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around; }
@@ -2406,6 +2428,7 @@ p {
 .reg-input {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 70px; }
@@ -2415,6 +2438,7 @@ p {
   position: relative;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start; }
@@ -2493,6 +2517,7 @@ p {
 .delivery {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -2504,6 +2529,7 @@ p {
 .delivery-btn {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -2512,6 +2538,7 @@ p {
 .delivery_control {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   align-items: center;
@@ -2521,6 +2548,7 @@ p {
 .reg-contacts {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -2603,6 +2631,7 @@ p {
 .product {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   flex-wrap: nowrap;
@@ -2631,6 +2660,7 @@ p {
 .product__info-more {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
@@ -2661,6 +2691,7 @@ p {
 .download {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -2719,6 +2750,7 @@ footer {
 .module__share {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   justify-content: flex-start; }
@@ -2804,6 +2836,7 @@ footer {
   .catalog {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between; }
